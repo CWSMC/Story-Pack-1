@@ -5,7 +5,7 @@ fov:-0.01804161
 gamma:0.0
 saturation:0.0
 renderDistance:8
-guiScale:2
+guiScale:3
 particles:2
 bobView:true
 anaglyph3d:false
@@ -133,7 +133,6 @@ key_key.aperture.control.rotateLeft:0
 key_key.aperture.control.rotateRight:0
 key_key.aperture.camera_editor:46
 key_key.aperture.smooth_camera:0
-key_key.toggle_focus.desc:15
 key_key.betterHud.open:22
 key_key.jei.toggleOverlay:24:CONTROL
 key_key.jei.focusSearch:33:CONTROL
