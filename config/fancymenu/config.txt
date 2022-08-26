@@ -17,7 +17,7 @@ I:defaultguiscale = '-1';
 ##[customization]
 
 B:advancedmode = 'true';
-B:showcustomizationbuttons = 'false';
+B:showcustomizationbuttons = 'true';
 
 
 ##[mainmenu]
@@ -70,4 +70,4 @@ B:showvanillamovewarning = 'false';
 
 ##[ui]
 
-F:uiscale = '3.5';
+F:uiscale = '2';
