@@ -3846,3 +3846,7 @@ com.google.gson.JsonSyntaxException: Unknown item 'techguns:shishkebap'
 [08:48:19] [Client thread/INFO]: [de.keksuccino.fancymenu.menu.animation.AnimationHandlerEvents:onGuiOpen:38]: [FANCYMENU] Updating animation sizes..
 [08:50:43] [Client thread/INFO]: [de.keksuccino.fancymenu.menu.animation.AnimationHandlerEvents:onGuiOpen:38]: [FANCYMENU] Updating animation sizes..
 [08:50:48] [Client thread/INFO]: [de.keksuccino.fancymenu.menu.animation.AnimationHandlerEvents:onGuiOpen:38]: [FANCYMENU] Updating animation sizes..
+[08:51:09] [Client thread/INFO]: [de.keksuccino.fancymenu.menu.animation.AnimationHandlerEvents:onGuiOpen:38]: [FANCYMENU] Updating animation sizes..
+[08:51:09] [Client thread/INFO]: Stopping!
+[08:51:09] [Client thread/INFO]: SoundSystem shutting down...
+[08:51:10] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
