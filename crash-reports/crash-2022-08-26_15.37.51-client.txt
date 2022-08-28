@@ -1,0 +1,307 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  IELoadingPlugin (ImmersiveEngineering-core-0.12-98.jar)
+  TransformerLoader (OpenComputers-MC1.12.2-1.7.5.192.jar)
+  MovingWorldCore (movingworld-1.12-6.353-full.jar)
+  ParticleCullingLoadingPlugin (particleculling-1.12.2-v1.3.1.jar)
+  CreativePatchingLoader (CreativeCore_v1.10.70_mc1.12.2.jar)
+  MoreSoundConfigCore (moresoundconfig-core-1.0.4.jar)
+  McLib core mod (mclib-2.4-1.12.2.jar)
+  CTMCorePlugin (CTM-MC1.12.2-1.0.2.31.jar)
+  KonkreteCore (konkrete_forge_1.5.0_MC_1.12-1.12.2.jar)
+  EnderCorePlugin (EnderCore-1.12.2-0.5.76-core.jar)
+  BlockbusterCore (blockbuster-2.5-1.12.2.jar)
+  LittlePatchingLoader (LittleTiles_v1.5.58_mc1.12.2.jar)
+  Techguns Core (techguns-1.12.2-2.0.2.0_pre3.2.jar)
+  FMCore (fancymenu_2.3.5_MC_1.12-1.12.2.jar)
+  MalisisCorePlugin (malisiscore-1.12.2-6.5.1.jar)
+  APCoreMod (aperture-1.8-1.12.2.jar)
+  SecurityCraftLoadingPlugin ([1.12.2] SecurityCraft v1.9.3.1.jar)
+Contact their authors BEFORE contacting forge
+
+// Hey, that tickles! Hehehe!
+
+Time: 8/26/22 3:37 PM
+Description: Rendering entity in world
+
+java.lang.NullPointerException: Rendering entity in world
+	at techguns.client.render.ItemRenderHack.shouldRenderItem(ItemRenderHack.java:124)
+	at techguns.client.render.ItemRenderHack.renderItem(ItemRenderHack.java:54)
+	at net.minecraft.client.renderer.RenderItem.func_181564_a(RenderItem.java:238)
+	at codechicken.lib.render.item.CCRenderItem.func_181564_a(CCRenderItem.java:293)
+	at noppes.npcs.client.renderer.RenderProjectile.doRenderProjectile(RenderProjectile.java:124)
+	at noppes.npcs.client.renderer.RenderProjectile.func_76986_a(RenderProjectile.java:145)
+	at net.minecraft.client.renderer.entity.RenderManager.func_188391_a(RenderManager.java:384)
+	at net.minecraft.client.renderer.entity.RenderManager.func_188388_a(RenderManager.java:368)
+	at net.minecraft.client.renderer.RenderGlobal.func_180446_a(RenderGlobal.java:628)
+	at net.minecraft.client.renderer.EntityRenderer.func_175068_a(EntityRenderer.java:1347)
+	at net.minecraft.client.renderer.EntityRenderer.func_78471_a(EntityRenderer.java:1259)
+	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1062)
+	at net.minecraft.client.Minecraft.func_71411_J(Minecraft.java:1119)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:398)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at techguns.client.render.ItemRenderHack.shouldRenderItem(ItemRenderHack.java:124)
+	at techguns.client.render.ItemRenderHack.renderItem(ItemRenderHack.java:54)
+	at net.minecraft.client.renderer.RenderItem.func_181564_a(RenderItem.java:238)
+	at codechicken.lib.render.item.CCRenderItem.func_181564_a(CCRenderItem.java:293)
+	at noppes.npcs.client.renderer.RenderProjectile.doRenderProjectile(RenderProjectile.java:124)
+	at noppes.npcs.client.renderer.RenderProjectile.func_76986_a(RenderProjectile.java:145)
+
+-- Entity being rendered --
+Details:
+	Entity Type: customnpcs:customnpcprojectile (noppes.npcs.entity.EntityProjectile)
+	Entity ID: 913583
+	Entity Name: entity.CustomNpcProjectile.name
+	Entity's Exact location: 6.36, 80.52, -631.91
+	Entity's Block location: World: (6,80,-632), Chunk: (at 6,5,8 in 0,-40; contains blocks 0,0,-640 to 15,255,-625), Region: (0,-2; contains chunks 0,-64 to 31,-33, blocks 0,0,-1024 to 511,255,-513)
+	Entity's Momentum: 0.50, -0.73, -0.46
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+
+-- Renderer details --
+Details:
+	Assigned renderer: noppes.npcs.client.renderer.RenderProjectile@60b226e1
+	Location: 3.48,1.52,4.09 - World: (3,1,4), Chunk: (at 3,0,4 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Rotation: 132.62074
+	Delta: 0.86010927
+Stacktrace:
+	at net.minecraft.client.renderer.entity.RenderManager.func_188391_a(RenderManager.java:384)
+	at net.minecraft.client.renderer.entity.RenderManager.func_188388_a(RenderManager.java:368)
+	at net.minecraft.client.renderer.RenderGlobal.func_180446_a(RenderGlobal.java:628)
+	at net.minecraft.client.renderer.EntityRenderer.func_175068_a(EntityRenderer.java:1347)
+	at net.minecraft.client.renderer.EntityRenderer.func_78471_a(EntityRenderer.java:1259)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 2 total; [EntityPlayerSP['Trident_For_U'/908329, l='MpServer', x=2.88, y=79.00, z=-636.00], EntityOtherPlayerMP['Invisibleman08'/908018, l='MpServer', x=8.03, y=82.68, z=-643.81]]
+	Chunk stats: MultiplayerChunkCache: 441, 441
+	Level seed: 0
+	Level generator: ID 06 - BIOMESOP, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (-72,64,289), Chunk: (at 8,4,1 in -5,18; contains blocks -80,0,288 to -65,255,303), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 117108384 game time, 1000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 110 total; [SkeletonSoldier['Skeleton Soldier'/912908, l='MpServer', x=-74.74, y=28.00, z=-598.50], ZombieMiner['Zombie Miner'/913156, l='MpServer', x=-48.50, y=19.00, z=-625.50], EntityCreeper['Creeper'/913152, l='MpServer', x=-53.50, y=19.00, z=-624.50], SkeletonSoldier['Skeleton Soldier'/913154, l='MpServer', x=-55.50, y=19.00, z=-625.50], EntityPlayerSP['Trident_For_U'/908329, l='MpServer', x=2.88, y=79.00, z=-636.00], EntityFox['Arctic Fox'/908060, l='MpServer', x=-74.75, y=72.00, z=-665.50], ZombieFarmer['Zombie Farmer'/912670, l='MpServer', x=-60.17, y=26.00, z=-613.53], EntityCreeper['Creeper'/912665, l='MpServer', x=-53.50, y=25.00, z=-646.50], SkeletonSoldier['Skeleton Soldier'/913177, l='MpServer', x=54.50, y=20.00, z=-622.50], EntityFox['Arctic Fox'/908057, l='MpServer', x=-73.34, y=69.00, z=-660.47], EntityFox['Arctic Fox'/908059, l='MpServer', x=-72.50, y=74.00, z=-666.63], EntityCreeper['Creeper'/912666, l='MpServer', x=-52.50, y=25.00, z=-645.50], ZombieMiner['Zombie Miner'/913174, l='MpServer', x=51.50, y=20.00, z=-623.50], EntityCreeper['Creeper'/913197, l='MpServer', x=-35.50, y=15.00, z=-634.50], EntitySkeleton['Skeleton'/912429, l='MpServer', x=-63.50, y=41.00, z=-712.50], Bandit['Bandit'/912428, l='MpServer', x=-64.50, y=41.00, z=-712.50], EntitySkeleton['Skeleton'/912687, l='MpServer', x=-18.50, y=51.00, z=-629.50], EntityZombie['Zombie'/912939, l='MpServer', x=33.50, y=24.00, z=-614.50], ZombieSoldier['Zombie Soldier'/913195, l='MpServer', x=-5.51, y=71.00, z=-653.21], EntityZombie['Zombie'/912677, l='MpServer', x=54.50, y=44.00, z=-646.50], EntityFox['Arctic Fox'/908068, l='MpServer', x=-66.36, y=68.00, z=-677.50], EntityFox['Arctic Fox'/908067, l='MpServer', x=-63.43, y=63.00, z=-684.76], EntityFox['Arctic Fox'/908093, l='MpServer', x=-47.60, y=76.00, z=-644.73], EntityOtherPlayerMP['Invisibleman08'/908018, l='MpServer', x=8.03, y=82.68, z=-643.81], ZombieFarmer['Zombie Farmer'/912697, l='MpServer', x=-49.50, y=28.00, z=-626.50], EntityZombie['Zombie'/912440, l='MpServer', x=43.50, y=62.00, z=-675.50], EntityZombie['Zombie'/912698, l='MpServer', x=-47.50, y=28.00, z=-627.50], ZombieMiner['Zombie Miner'/913205, l='MpServer', x=30.50, y=26.00, z=-599.50], EntitySquid['Squid'/908087, l='MpServer', x=-49.08, y=62.15, z=-672.96], EntitySquid['Squid'/908086, l='MpServer', x=-37.47, y=52.20, z=-694.16], ZombieMiner['Zombie Miner'/912462, l='MpServer', x=-16.13, y=69.00, z=-652.88], ZombieMiner['Zombie Miner'/912453, l='MpServer', x=67.50, y=31.00, z=-630.50], EntityBat['Bat'/908100, l='MpServer', x=-50.66, y=29.82, z=-626.17], Bandit['Bandit'/912967, l='MpServer', x=-4.50, y=38.00, z=-677.50], EntitySquid['Squid'/908096, l='MpServer', x=-43.40, y=56.00, z=-668.80], EntityFox['Arctic Fox'/908098, l='MpServer', x=-62.25, y=79.00, z=-660.51], EntityCreeper['Creeper'/912469, l='MpServer', x=35.50, y=29.00, z=-632.50], ZombieFarmer['Zombie Farmer'/912468, l='MpServer', x=-9.41, y=69.00, z=-651.18], EntityBat['Bat'/908112, l='MpServer', x=-5.64, y=17.60, z=-618.30], ZombieFarmer['Zombie Farmer'/912464, l='MpServer', x=-14.49, y=70.00, z=-643.79], ZombieMiner['Zombie Miner'/912466, l='MpServer', x=-7.50, y=69.00, z=-653.50], EntityCow['Cow'/908141, l='MpServer', x=-24.42, y=77.00, z=-570.83], EntityCow['Cow'/908140, l='MpServer', x=-16.77, y=79.00, z=-566.86], EntityCow['Cow'/908143, l='MpServer', x=-22.47, y=75.00, z=-563.78], EntityCow['Cow'/908142, l='MpServer', x=-20.16, y=78.00, z=-575.54], EntityBat['Bat'/908139, l='MpServer', x=-17.24, y=32.66, z=-572.69], EntitySkeleton['Skeleton'/912993, l='MpServer', x=54.50, y=44.00, z=-648.50], EntitySquid['Squid'/908131, l='MpServer', x=-21.35, y=62.53, z=-685.89], EntityZombie['Zombie'/912482, l='MpServer', x=-18.50, y=54.00, z=-641.50], SkeletonSoldier['Skeleton Soldier'/912764, l='MpServer', x=61.50, y=45.00, z=-704.50], EntityBat['Bat'/908152, l='MpServer', x=-2.25, y=55.10, z=-641.75], EntityBat['Bat'/908148, l='MpServer', x=-6.84, y=34.17, z=-653.16], EntityBat['Bat'/908151, l='MpServer', x=-1.49, y=33.03, z=-666.86], EntityBat['Bat'/908150, l='MpServer', x=-5.24, y=34.04, z=-658.83], ZombieMiner['Zombie Miner'/913270, l='MpServer', x=41.50, y=26.00, z=-631.50], ZombieMiner['Zombie Miner'/912496, l='MpServer', x=62.82, y=40.00, z=-652.45], SkeletonSoldier['Skeleton Soldier'/912521, l='MpServer', x=82.50, y=18.00, z=-677.50], Bandit['Bandit'/913545, l='MpServer', x=78.71, y=55.00, z=-677.90], SkeletonSoldier['Skeleton Soldier'/913547, l='MpServer', x=65.52, y=58.00, z=-678.71], EntityZombie['Zombie'/913541, l='MpServer', x=75.50, y=55.00, z=-675.50], EntityBat['Bat'/908167, l='MpServer', x=-1.75, y=43.10, z=-591.41], EntityCreeper['Creeper'/912519, l='MpServer', x=27.50, y=30.00, z=-652.50], ZombieFarmer['Zombie Farmer'/913543, l='MpServer', x=79.18, y=55.00, z=-677.21], EntityCreeper['Creeper'/912518, l='MpServer', x=27.50, y=30.00, z=-651.50], EntityCustomNpc['TechGunsTest'/908188, l='MpServer', x=6.19, y=79.00, z=-631.84], ZombieMiner['Zombie Miner'/912796, l='MpServer', x=-54.50, y=25.00, z=-628.70], ZombieFarmer['Zombie Farmer'/913566, l='MpServer', x=6.88, y=79.00, z=-632.42], Bandit['Bandit'/913304, l='MpServer', x=10.50, y=23.00, z=-559.50], EntityBat['Bat'/913562, l='MpServer', x=51.50, y=26.10, z=-703.92], ZombieMiner['Zombie Miner'/912813, l='MpServer', x=29.50, y=34.00, z=-641.50], ZombieMiner['Zombie Miner'/913325, l='MpServer', x=-50.66, y=29.00, z=-588.63], SkeletonSoldier['Skeleton Soldier'/913327, l='MpServer', x=-49.30, y=29.00, z=-587.30], EntityProjectile['entity.CustomNpcProjectile.name'/913583, l='MpServer', x=6.36, y=80.52, z=-631.91], EntityPig['Pig'/908206, l='MpServer', x=30.62, y=75.00, z=-579.72], EntityChicken['Chicken'/908200, l='MpServer', x=17.46, y=87.00, z=-679.59], EntityItem['item.item.egg'/908203, l='MpServer', x=30.13, y=82.00, z=-684.68], ZombieMiner['Zombie Miner'/913323, l='MpServer', x=-50.25, y=30.00, z=-587.85], EntityItem['item.item.egg'/908202, l='MpServer', x=21.31, y=84.00, z=-685.88], EntityBat['Bat'/908197, l='MpServer', x=23.40, y=32.52, z=-684.71], EntityChicken['Chicken'/908199, l='MpServer', x=12.53, y=85.00, z=-677.88], EntityChicken['Chicken'/908198, l='MpServer', x=30.50, y=82.00, z=-685.50], EntityChicken['Chicken'/908195, l='MpServer', x=25.51, y=85.00, z=-693.18], ZombieFarmer['Zombie Farmer'/913080, l='MpServer', x=-17.50, y=49.00, z=-605.50], EntityItem['item.item.egg'/911032, l='MpServer', x=24.62, y=85.00, z=-693.66], EntityPig['Pig'/908213, l='MpServer', x=39.29, y=75.00, z=-582.49], EntityPig['Pig'/908212, l='MpServer', x=37.31, y=79.00, z=-589.23], EntityProjectile['entity.CustomNpcProjectile.name'/913585, l='MpServer', x=6.36, y=80.52, z=-631.91], EntityProjectile['entity.CustomNpcProjectile.name'/913584, l='MpServer', x=6.36, y=80.52, z=-631.91], Bandit['Bandit'/913330, l='MpServer', x=45.50, y=20.00, z=-650.50], EntityProjectile['entity.CustomNpcProjectile.name'/913586, l='MpServer', x=6.36, y=80.52, z=-631.91], ZombieMiner['Zombie Miner'/913352, l='MpServer', x=28.70, y=12.00, z=-634.70], ZombieMiner['Zombie Miner'/912577, l='MpServer', x=-61.50, y=24.00, z=-647.50], EntityPig['Pig'/908227, l='MpServer', x=40.22, y=76.00, z=-612.49], ZombieFarmer['Zombie Farmer'/913347, l='MpServer', x=-3.09, y=53.00, z=-640.66], EntitySkeleton['Skeleton'/912578, l='MpServer', x=-62.50, y=24.00, z=-648.50], EntityItem['item.item.berries'/908248, l='MpServer', x=66.23, y=81.00, z=-685.21], ZombieMiner['Zombie Miner'/913370, l='MpServer', x=-5.50, y=71.00, z=-646.79], ZombieMiner['Zombie Miner'/913109, l='MpServer', x=-51.50, y=19.00, z=-633.50], ZombieMiner['Zombie Miner'/913111, l='MpServer', x=-48.50, y=19.00, z=-629.50], ZombieSoldier['Zombie Soldier'/912593, l='MpServer', x=-28.50, y=31.00, z=-579.50], ZombieMiner['Zombie Miner'/913107, l='MpServer', x=-51.50, y=19.00, z=-634.50], ZombieMiner['Zombie Miner'/913388, l='MpServer', x=73.50, y=30.00, z=-642.50], ZombieMiner['Zombie Miner'/913390, l='MpServer', x=70.50, y=30.00, z=-640.50], ZombieMiner['Zombie Miner'/913386, l='MpServer', x=71.50, y=30.00, z=-639.50], EntitySpider['Spider'/913383, l='MpServer', x=65.50, y=36.00, z=-628.50], SkeletonSoldier['Skeleton Soldier'/912614, l='MpServer', x=-36.50, y=15.00, z=-634.50], EntityCreeper['Creeper'/913151, l='MpServer', x=-52.50, y=19.00, z=-623.50], EntityZombie['Zombie'/913150, l='MpServer', x=16.50, y=6.00, z=-575.50], EntityXPOrb['Experience Orb'/908020, l='MpServer', x=-141.01, y=54.00, z=-652.45], EntityOtherPlayerMP['Invisibleman08'/908018, l='MpServer', x=8.03, y=82.68, z=-643.81]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.func_72914_a(WorldClient.java:420)
+	at net.minecraft.client.Minecraft.func_71396_d(Minecraft.java:2741)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:419)
+	at net.minecraft.client.main.Main.main(SourceFile:123)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Linux (amd64) version 5.19.2-surface
+	Java Version: 1.8.0_312, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 1045075672 bytes (996 MB) / 4609015808 bytes (4395 MB) up to 7635730432 bytes (7282 MB)
+	JVM Flags: 3 total; -Xmx8192m -Xms8192m -Xms256m
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2859 93 mods loaded, 90 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State  | ID                                           | Version               | Source                                        | Signature                                |
+	|:------ |:-------------------------------------------- |:--------------------- |:--------------------------------------------- |:---------------------------------------- |
+	| LCHIJA | minecraft                                    | 1.12.2                | minecraft.jar                                 | None                                     |
+	| LCHIJA | mcp                                          | 9.42                  | minecraft.jar                                 | None                                     |
+	| LCHIJA | FML                                          | 8.0.99.99             | forge-1.12.2-14.23.5.2859.jar                 | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHIJA | forge                                        | 14.23.5.2859          | forge-1.12.2-14.23.5.2859.jar                 | e3c3d50c7c986df74c645c0ac54639741c90a557 |
+	| LCHIJA | creativecoredummy                            | 1.0.0                 | minecraft.jar                                 | None                                     |
+	| LCHIJA | littletilescore                              | 1.0.0                 | minecraft.jar                                 | None                                     |
+	| LCHIJA | com.elytradev.movingworld.common.asm.coremod |                       | minecraft.jar                                 | None                                     |
+	| LCHIJA | opencomputers|core                           | 1.7.5.192             | minecraft.jar                                 | None                                     |
+	| LCHIJA | moresoundconfigcore                          | 1.0.0                 | minecraft.jar                                 | None                                     |
+	| LCHIJA | techguns_core                                | 1.12.2-1.0            | minecraft.jar                                 | None                                     |
+	| LCHIJA | securitycraft                                | v1.9.3.1              | [1.12.2] SecurityCraft v1.9.3.1.jar           | None                                     |
+	| LCHIJA | mclib                                        | 2.4                   | mclib-2.4-1.12.2.jar                          | None                                     |
+	| LCHIJA | metamorph                                    | 1.3                   | metamorph-1.3-1.12.2.jar                      | None                                     |
+	| LCHIJA | blockbuster                                  | 2.5                   | blockbuster-2.5-1.12.2.jar                    | None                                     |
+	| LCHIJA | aperture                                     | 1.8                   | aperture-1.8-1.12.2.jar                       | None                                     |
+	| LCHIJA | ctm                                          | MC1.12.2-1.0.2.31     | CTM-MC1.12.2-1.0.2.31.jar                     | None                                     |
+	| LCHIJA | appliedenergistics2                          | rv6-stable-7          | appliedenergistics2-rv6-stable-7.jar          | dfa4d3ac143316c6f32aa1a1beda1e34d42132e5 |
+	| LCHIJA | appliedintegrations                          | 8.0.16.7              | AppliedIntegrations-1.12.2-e2884e6f.jar       | None                                     |
+	| LCHIJA | betterhud                                    | 1.4.4                 | betterhud-1.12.2-1.4.4.jar                    | None                                     |
+	| LCHIJA | betterquesting                               | 3.5.329               | BetterQuesting-3.5.329.jar                    | None                                     |
+	| LCHIJA | bibliocraft                                  | 2.4.6                 | BiblioCraft[v2.4.6][MC1.12.2].jar             | None                                     |
+	| LCHIJA | biomesoplenty                                | 7.0.1.2445            | BiomesOPlenty-1.12.2-7.0.1.2445-universal.jar | None                                     |
+	| LCHIJA | blockcraftery                                | 1.12.2-1.3.1          | blockcraftery-1.12.2-1.3.1.jar                | None                                     |
+	| LCHIJA | bnbgaminglib                                 | 2.17.6                | BNBGamingLib-1.12.2-2.17.6.jar                | None                                     |
+	| LCHIJA | jei                                          | 4.16.1.301            | jei_1.12.2-4.16.1.301.jar                     | None                                     |
+	| LCHIJA | chisel                                       | MC1.12.2-1.0.2.45     | Chisel-MC1.12.2-1.0.2.45.jar                  | None                                     |
+	| LCHIJA | codechickenlib                               | 3.2.3.358             | CodeChickenLib-1.12.2-3.2.3.358-universal.jar | f1850c39b2516232a2108a7bd84d1cb5df93b261 |
+	| LCHIJA | compactmachines3                             | 3.0.18                | compactmachines3-1.12.2-3.0.18-b278.jar       | None                                     |
+	| LCHIJA | creativecore                                 | 1.10.0                | CreativeCore_v1.10.70_mc1.12.2.jar            | None                                     |
+	| LCHIJA | customnpcs                                   | 1.12                  | CustomNPCs_1.12.2-(05Jul20).jar               | None                                     |
+	| LCHIJA | customstartinggear                           | 1.2.0                 | CustomStartingGear-1.12-1.2.0.9-universal.jar | None                                     |
+	| LCHIJA | discordcraft                                 | 1.0                   | DiscordCraft-2.0.jar                          | None                                     |
+	| LCHIJA | dynamictrees                                 | 1.12.2-0.9.29         | DynamicTrees-1.12.2-0.9.29.jar                | None                                     |
+	| LCHIJA | dynamictreesbop                              | 1.12.2-1.5.1          | DynamicTreesBOP-1.12.2-1.5.1.jar              | None                                     |
+	| LCHIJA | endercore                                    | 1.12.2-0.5.76         | EnderCore-1.12.2-0.5.76.jar                   | None                                     |
+	| LCHIJA | enderio                                      | 5.3.70                | EnderIO-1.12.2-5.3.70.jar                     | None                                     |
+	| LCHIJA | enderiointegrationtic                        | 5.3.70                | EnderIO-1.12.2-5.3.70.jar                     | None                                     |
+	| LCHIJA | mantle                                       | 1.12-1.3.3.55         | Mantle-1.12-1.3.3.55.jar                      | None                                     |
+	| LCHIJA | tconstruct                                   | 1.12.2-2.13.0.183     | TConstruct-1.12.2-2.13.0.183.jar              | None                                     |
+	| LCHIJA | dynamictreestconstruct                       | 1.12.2-1.2.7          | DynamicTreesTinkersConstruct-1.12.2-1.2.7.jar | None                                     |
+	| LCHIJA | enderiobase                                  | 5.3.70                | EnderIO-1.12.2-5.3.70.jar                     | None                                     |
+	| LCHIJA | enderioconduits                              | 5.3.70                | EnderIO-1.12.2-5.3.70.jar                     | None                                     |
+	| LCHIJA | enderioconduitsappliedenergistics            | 5.3.70                | EnderIO-1.12.2-5.3.70.jar                     | None                                     |
+	| LCHIJA | opencomputers                                | 1.7.5.192             | OpenComputers-MC1.12.2-1.7.5.192.jar          | None                                     |
+	| LCHIJA | enderioconduitsopencomputers                 | 5.3.70                | EnderIO-1.12.2-5.3.70.jar                     | None                                     |
+	| LCHIJA | enderioconduitsrefinedstorage                | 5.3.70                | EnderIO-1.12.2-5.3.70.jar                     | None                                     |
+	| LCHIJA | enderiointegrationforestry                   | 5.3.70                | EnderIO-1.12.2-5.3.70.jar                     | None                                     |
+	| LCHIJA | enderiointegrationticlate                    | 5.3.70                | EnderIO-1.12.2-5.3.70.jar                     | None                                     |
+	| LCHIJA | enderioinvpanel                              | 5.3.70                | EnderIO-1.12.2-5.3.70.jar                     | None                                     |
+	| LCHIJA | enderiomachines                              | 5.3.70                | EnderIO-1.12.2-5.3.70.jar                     | None                                     |
+	| LCHIJA | enderiopowertools                            | 5.3.70                | EnderIO-1.12.2-5.3.70.jar                     | None                                     |
+	| LCHIJA | enderstorage                                 | 2.4.6.137             | EnderStorage-1.12.2-2.4.6.137-universal.jar   | f1850c39b2516232a2108a7bd84d1cb5df93b261 |
+	| LCHIJA | eternalwinter                                | 1.0.3                 | eternalwinter-1.0.3.jar                       | 7904c4e13947c8a616c5f39b26bdeba796500722 |
+	| LCHIJA | extrautils2                                  | 1.0                   | extrautils2-1.12-1.9.9.jar                    | None                                     |
+	| LCHIJA | konkrete                                     | 1.5.0                 | konkrete_forge_1.5.0_MC_1.12-1.12.2.jar       | None                                     |
+	| LCHIJA | fancymenu                                    | 2.3.5                 | fancymenu_2.3.5_MC_1.12-1.12.2.jar            | None                                     |
+	| LCHIJA | flansmod                                     | 5.10.0                | Flan's Mod-1.12.2-5.10.0.jar                  | None                                     |
+	| LCHIJA | cfm                                          | 6.3.0                 | furniture-6.3.2-1.12.2.jar                    | None                                     |
+	| LCHIJA | waila                                        | 1.8.26                | Hwyla-1.8.26-B41_1.12.2.jar                   | None                                     |
+	| LCHIJA | immersiveengineering                         | 0.12-98               | ImmersiveEngineering-0.12-98.jar              | None                                     |
+	| LCHIJA | immersivecables                              | 1.3.2                 | ImmersiveCables-1.12.2-1.3.2.jar              | None                                     |
+	| LCHIJA | immersivepetroleum                           | 1.1.10                | immersivepetroleum-1.12.2-1.1.10.jar          | None                                     |
+	| LCHIJA | immersiveposts                               | 0.2.1                 | ImmersivePosts-0.2.1.jar                      | 0ba8738eadcf158e7fe1452255a73a022fb15feb |
+	| LCHIJA | ironchest                                    | 1.12.2-7.0.67.844     | ironchest-1.12.2-7.0.72.847.jar               | None                                     |
+	| LCHIJA | littleframes                                 | 1.0.0                 | LittleFrames_v1.0.12_mc1.12.2.jar             | None                                     |
+	| LCHIJA | littletiles                                  | 1.5.0                 | LittleTiles_v1.5.58_mc1.12.2.jar              | None                                     |
+	| LCHIJA | loadingscreens                               | 0.3.1                 | LoadingScreens-1.12.2-0.3.1.jar               | None                                     |
+	| LCHIJA | malisiscore                                  | 1.12.2-6.5.1-SNAPSHOT | malisiscore-1.12.2-6.5.1.jar                  | None                                     |
+	| LCHIJA | malisisdoors                                 | 1.12.2-7.3.0          | malisisdoors-1.12.2-7.3.0.jar                 | None                                     |
+	| LCHIJA | immersivetech                                | 1.9.100               | MCTImmersiveTechnology-1.12.2-1.9.100.jar     | None                                     |
+	| LCHIJA | mcwdoors                                     | 1.3                   | mcw-doors-1.0.3-mc1.12.2.jar                  | None                                     |
+	| LCHIJA | modernweaponspack                            | 5.8.2                 | Modern Warfare-Content Pack-1.12.2-5.8.2.jar  | None                                     |
+	| LCHIJA | movingworld                                  | 1.12-6.353            | movingworld-1.12-6.353-full.jar               | None                                     |
+	| LCHIJA | particleculling                              | v1.3                  | particleculling-1.12.2-v1.3.1.jar             | None                                     |
+	| LCHIJA | reauth                                       | 4.0.3                 | ReAuth-1.12-Forge-4.0.3.jar                   | daba0ec4df71b6da841768c49fb873def208a1e3 |
+	| LCHIJA | corerm                                       | 1.3.3                 | RikMuldsCore_1.3.3.jar                        | None                                     |
+	| LCHIJA | simplepartspack                              | 5.7.2                 | Simple Parts-Content Pack-1.12.2-5.7.2.jar    | None                                     |
+	| LCHIJA | simple-rpc                                   | 1.0                   | simple-rpc-1.12.2-3.1.1.jar                   | None                                     |
+	| LCHIJA | soundfilters                                 | 0.12.1_for_1.12       | SoundFilters-0.12.1_for_1.12.jar              | None                                     |
+	| LCHIJA | bq_standard                                  | 3.4.173               | StandardExpansion-3.4.173.jar                 | None                                     |
+	| LCHIJA | techguns                                     | 2.0.2.0               | techguns-1.12.2-2.0.2.0_pre3.2.jar            | None                                     |
+	| LCHIJA | camping                                      | 2.4.3                 | TheCampingMod_2.4.3.jar                       | None                                     |
+	| LCHIJA | undergroundbiomes                            | 1.3.14                | UndergroundBiomesConstructs-1.12-1.3.14.jar   | None                                     |
+	| LCHIJA | unlimitedchiselworks                         | 0.3.5                 | UnlimitedChiselWorks-0.3.5.jar                | None                                     |
+	| LCHIJA | wawla                                        | 2.6.275               | Wawla-1.12.2-2.6.275.jar                      | d476d1b22b218a10d845928d1665d45fce301b27 |
+	| LCHIJA | worldedit                                    | 6.1.10                | worldedit-forge-mc1.12.2-6.1.10-dist.jar      | None                                     |
+	| LCHIJA | worldeditcuife3                              | 3.0.9                 | WorldEdit-CUI-FE3-1.12.2-3.0.9.jar            | None                                     |
+	| LCHIJA | worldeditwand                                | 1.1.0                 | worldedit-wanditems-v1.1-mc1.12.2.jar         | None                                     |
+	| LCHIJA | moresoundconfig                              | 1.0.4                 | moresoundconfig-1.0.4.jar                     | 7904c4e13947c8a616c5f39b26bdeba796500722 |
+	| LCHIJA | mysticallib                                  | 1.12.2-1.13.0         | mysticallib-1.12.2-1.13.0.jar                 | None                                     |
+	| UD     | aperture_core                                | 1.8                   | minecraft.jar                                 | None                                     |
+	| UD     | blockbuster_core                             | 2.5                   | minecraft.jar                                 | None                                     |
+	| UD     | mclib_core                                   | 2.4                   | minecraft.jar                                 | None                                     |
+
+	Loaded coremods (and transformers): 
+IELoadingPlugin (ImmersiveEngineering-core-0.12-98.jar)
+  blusunrize.immersiveengineering.common.asm.IEClassTransformer
+TransformerLoader (OpenComputers-MC1.12.2-1.7.5.192.jar)
+  li.cil.oc.common.asm.ClassTransformer
+MovingWorldCore (movingworld-1.12-6.353-full.jar)
+  
+ParticleCullingLoadingPlugin (particleculling-1.12.2-v1.3.1.jar)
+  
+CreativePatchingLoader (CreativeCore_v1.10.70_mc1.12.2.jar)
+  
+MoreSoundConfigCore (moresoundconfig-core-1.0.4.jar)
+  ichttt.mods.moresoundconfig.asm.MSCTransformer
+McLib core mod (mclib-2.4-1.12.2.jar)
+  mchorse.mclib.core.McLibCMClassTransformer
+CTMCorePlugin (CTM-MC1.12.2-1.0.2.31.jar)
+  team.chisel.ctm.client.asm.CTMTransformer
+KonkreteCore (konkrete_forge_1.5.0_MC_1.12-1.12.2.jar)
+  
+EnderCorePlugin (EnderCore-1.12.2-0.5.76-core.jar)
+  com.enderio.core.common.transform.EnderCoreTransformer
+  com.enderio.core.common.transform.SimpleMixinPatcher
+BlockbusterCore (blockbuster-2.5-1.12.2.jar)
+  mchorse.blockbuster.core.BBCoreClassTransformer
+LittlePatchingLoader (LittleTiles_v1.5.58_mc1.12.2.jar)
+  com.creativemd.littletiles.LittleTilesTransformer
+Techguns Core (techguns-1.12.2-2.0.2.0_pre3.2.jar)
+  techguns.core.TechgunsASMTransformer
+FMCore (fancymenu_2.3.5_MC_1.12-1.12.2.jar)
+  
+MalisisCorePlugin (malisiscore-1.12.2-6.5.1.jar)
+  
+APCoreMod (aperture-1.8-1.12.2.jar)
+  mchorse.aperture.core.APCoreClassTransformer
+SecurityCraftLoadingPlugin ([1.12.2] SecurityCraft v1.9.3.1.jar)
+  
+	GL info: ' Vendor: 'Intel' Version: '4.6 (Compatibility Profile) Mesa 22.0.5' Renderer: 'Mesa Intel(R) UHD Graphics 620 (KBL GT2)'
+	AE2 Version: stable rv6-stable-7 for Forge 14.23.5.2768
+	Ender IO: No known problems detected.
+	Authlib is : /home/gameplex/.config/gdlauncher_next/datastore/libraries/com/mojang/authlib/1.5.25/authlib-1.5.25.jar
+
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	!!!You are looking at the diagnostics information, not at the crash.       !!!
+	!!!Scroll up until you see the line with '---- Minecraft Crash Report ----'!!!
+	!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	Pulsar/tconstruct loaded Pulses: 
+		- TinkerCommons (Enabled/Forced)
+		- TinkerWorld (Enabled/Not Forced)
+		- TinkerTools (Enabled/Not Forced)
+		- TinkerHarvestTools (Enabled/Forced)
+		- TinkerMeleeWeapons (Enabled/Forced)
+		- TinkerRangedWeapons (Enabled/Forced)
+		- TinkerModifiers (Enabled/Forced)
+		- TinkerSmeltery (Enabled/Not Forced)
+		- TinkerGadgets (Enabled/Not Forced)
+		- TinkerOredict (Enabled/Forced)
+		- TinkerIntegration (Enabled/Forced)
+		- TinkerFluids (Enabled/Forced)
+		- TinkerMaterials (Enabled/Forced)
+		- TinkerModelRegister (Enabled/Forced)
+		- chiselIntegration (Enabled/Not Forced)
+		- wailaIntegration (Enabled/Not Forced)
+
+	AE2 Integration: IC2:OFF, RC:OFF, MFR:OFF, Waila:ON, InvTweaks:OFF, JEI:ON, Mekanism:OFF, OpenComputers:ON, THE_ONE_PROBE:OFF, TESLA:OFF, CRAFTTWEAKER:OFF
+	Launched Version: 1.12.2
+	LWJGL: 2.9.4
+	OpenGL: Mesa Intel(R) UHD Graphics 620 (KBL GT2) GL version 4.6 (Compatibility Profile) Mesa 22.0.5, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i7-8650U CPU @ 1.90GHz
