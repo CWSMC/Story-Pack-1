@@ -104,18 +104,18 @@ customization {
 customization {
   path = resources/overlay.png
   orientation = mid-right
-  x = -139
-  width = 139
+  x = -124
+  width = 124
   actionid = 322f2fec-de38-43f3-bdcf-f62ecfc78c6f1638531180715
   action = addtexture
   y = -131
-  height = 223
+  height = 259
 }
 
 customization {
   orientation = mid-right
   shadow = false
-  x = -111
+  x = -102
   actionid = 7bfb08b9-39d9-4768-b9a3-0e93614cc9e11638531227823
   action = addtext
   y = -125
@@ -128,7 +128,7 @@ customization {
   showname = true
   orientation = mid-right
   crouching = false
-  x = -124
+  x = -102
   slim = false
   actionid = a1554ca9-72f9-4522-b414-f4e7e120412c1638531255901
   action = addentity
@@ -142,7 +142,7 @@ customization {
   showname = true
   orientation = mid-right
   crouching = false
-  x = -125
+  x = -104
   slim = false
   actionid = 6c651eb8-30e6-4566-84ba-eb78dd9715c11638531256752
   action = addentity
@@ -156,7 +156,7 @@ customization {
   showname = true
   orientation = mid-right
   crouching = false
-  x = -124
+  x = -100
   slim = false
   actionid = dd451f0f-ca93-4224-b1e2-323a4990a0401638531256952
   action = addentity
@@ -170,7 +170,7 @@ customization {
   showname = true
   orientation = mid-right
   crouching = false
-  x = -125
+  x = -106
   slim = false
   actionid = 0e450679-d409-4392-b7b3-9071d66c257a1638531257101
   action = addentity
@@ -339,7 +339,7 @@ customization {
 customization {
   orientation = mid-right
   shadow = false
-  x = -107
+  x = -85
   actionid = 3d0cd9dc-1235-41a7-b810-cdd191a8b85d1655062695820
   action = addtext
   y = -43
@@ -351,7 +351,7 @@ customization {
 customization {
   orientation = mid-right
   shadow = false
-  x = -109
+  x = -86
   actionid = 03d8da97-8b50-425f-819c-b60b971cd5b31655062763061
   action = addtext
   y = -105
@@ -363,7 +363,7 @@ customization {
 customization {
   orientation = mid-right
   shadow = false
-  x = -109
+  x = -86
   actionid = edc70536-1481-4026-9208-bd40ebdd2bf01655062803558
   action = addtext
   y = -94
@@ -375,19 +375,19 @@ customization {
 customization {
   orientation = mid-right
   shadow = false
-  x = -107
+  x = -85
   actionid = 5e6020a6-6c50-4341-865b-9025540e21f11655062826156
   action = addtext
   y = -31
   scale = 1.0
   alignment = left
-  value = Current Owner, Dev
+  value = Owner, Dev
 }
 
 customization {
   orientation = mid-right
   shadow = false
-  x = -107
+  x = -85
   actionid = 28efe12f-26c5-4932-937c-effe956c6fb11655062872755
   action = addtext
   y = 4
@@ -399,7 +399,7 @@ customization {
 customization {
   orientation = mid-right
   shadow = false
-  x = -107
+  x = -85
   actionid = 67c32fea-046f-421d-9c94-01636f3c1a2f1655062880300
   action = addtext
   y = -9
@@ -411,7 +411,7 @@ customization {
 customization {
   orientation = mid-right
   shadow = false
-  x = -107
+  x = -85
   actionid = 86518b68-b441-4001-afe8-1f9d744a80771655062937464
   action = addtext
   y = 41
@@ -423,10 +423,48 @@ customization {
 customization {
   orientation = mid-right
   shadow = false
-  x = -108
+  x = -85
   actionid = 071d10ac-d882-4d14-bb25-d7d46bcf67841655062942004
   action = addtext
   y = 53
+  scale = 1.0
+  alignment = left
+  value = Artist, Dev
+}
+
+customization {
+  showname = true
+  orientation = mid-right
+  crouching = false
+  x = -100
+  slim = false
+  actionid = f924b68a-afb6-4add-8924-73a1d4f17a271661782569234
+  action = addentity
+  y = 124
+  scale = 20
+  playername = invisibleman08
+  parrot = false
+}
+
+customization {
+  orientation = mid-right
+  shadow = false
+  x = -85
+  actionid = 476ed2d4-7286-4301-87b6-175619d4069a1661782602356
+  action = addtext
+  y = 87
+  scale = 1.0
+  alignment = left
+  value = InvisibleMan08
+}
+
+customization {
+  orientation = mid-right
+  shadow = false
+  x = -85
+  actionid = b9c26a10-f6f9-4ddc-b7cd-b5a58c062e911661782632556
+  action = addtext
+  y = 98
   scale = 1.0
   alignment = left
   value = Artist, Dev
