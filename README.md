@@ -1,3 +1,6 @@
+### Credit for the mods in this repo
+Credit for the mods in this repository can be found in the modlist.html flie, this repository is not an attempt to redistribute those mods. This repo is for development, and testing purposes only, all credit for the mods contained in this repo go to the original authors of those mods.
+
 ### From the developers of Cruel World Survival
   
 ![1657468891163](https://user-images.githubusercontent.com/34868944/178152447-a791f2e7-0c2f-4ce3-95ee-14f60370dad5.png)
